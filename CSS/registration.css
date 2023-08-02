@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(30,45,60,0.2), rgba(90,180,220,0.2)), url("https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+form {
+    max-width: 350px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+form input[type="date"] {
+    margin-top: 10px;
+}
+form label {
+    font-weight: bold;
+}
+form input[type="radio"] {
+    margin-right: 5px;
+}
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.login{
+    color: #000;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.login:hover{
+    color: blue;
+}

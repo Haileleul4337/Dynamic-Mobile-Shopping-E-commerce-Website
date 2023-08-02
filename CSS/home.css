@@ -1,0 +1,144 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.navbar{
+    background-color: #262852;
+    color: #fff;
+}
+.navbar-brand{
+    font-size: x-large;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 550;
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: #fff;
+}
+::placeholder{
+    color: #fff !important;
+    opacity: 0.5 !important;
+}
+.signin:hover{
+    background-color: rgb(30, 41, 41);
+    
+}
+.aqua:hover{
+    color:aqua !important;
+}
+a:active{
+    color:aqua !important;
+}
+li{
+    list-style: none;
+}
+.dropdown:hover .dropdown-menu{
+    display: flex;
+    
+}
+.navbar-toggler{
+    border: 1px solid #fff;
+}
+.text-on-carousel{
+    position: absolute;
+    top: 7.813vw;
+    left: 17.188vw;
+    width: 60%;
+    color: #fff;
+}
+.carousel-all-new-phones{
+    font-weight: 500;
+    font-size: 4vw;
+}
+.carousel-upto{
+    font-size: 4vw;
+    font-weight: 800;
+}
+.carousel-p{
+    font-size: 1.250vw;
+}
+.shopnowbutton{
+    font-size: 1vw !important;
+}
+.seemore:hover{
+    box-shadow: inset 200px 0 0 0 #fff;
+    transition: ease 1s;
+    color: #000;
+}
+.socials-a{
+    margin-right: 5px;
+}
+.socials-img:hover{
+    background-image: url("images/twitter-hover.png");
+}
+.links{
+    color: #fff;
+}
+.links:hover{
+    color: aqua;
+}
+.btn-hover:hover {
+    box-shadow: inset 150px 0 0 0 blue;
+    transition:ease 1s;
+    color: #fff;
+}
+#about-us p{
+    text-align: justify;
+}
+
+#about-us{
+    display: none;
+}
+.footer{
+    color:#fff;
+}
+.morediv{
+    display: none;
+}
+/* MEGAMENU */
+.navbar .megamenu{ padding: 1rem; }
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+  .navbar .has-megamenu{position:static!important;}
+  .navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
+}	
+/* ============ desktop view .end// ============ */
+/* ============ mobile view ============ */
+@media(max-width: 991px){
+  .navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
+    overflow-y: auto;
+      max-height: 90vh;
+      margin-top:10px;
+  }
+}
+/* ============ mobile view .end// ============ */
+/* media queries */
+/* ipad size  */
+@media screen and (max-width: 811px) {
+    .signinli{
+        padding-left: 0px !important;
+    }
+    .signin{
+        border: none !important;
+    }
+  }
+/* ipad size */
+/* small android size */
+@media (max-width: 575.98px) {
+    .carousel-p,
+    .shopnowbutton, 
+    .socials{
+        display: none;
+    }
+    .carousel-all-new-phones,
+    .carousel-upto{
+        font-size: 25px !important;
+    }
+    .formsearch{
+        display: block;
+    }
+    .formsearch-0{
+        display: none;
+    }
+ }
+

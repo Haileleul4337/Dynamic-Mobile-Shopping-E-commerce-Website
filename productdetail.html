@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/product.css">
+    <script src="https://kit.fontawesome.com/e64fb21ce1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row w-100 justify-content-center bg-light py-5 border-1 rounded-4">
+        
+            <div class="col-md-4">
+                <!-- Product Images Carousel -->
+                <div id="productImagesCarousel" class="carousel slide bigimage" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/iphone.png" class="d-block w-100" alt="Product Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/iphone2.png" class="d-block w-100" alt="Product Image 2">
+                        </div>
+                        <!-- Add more carousel items if needed -->
+                    </div>
+                    <a class="carousel-control-prev" href="#productImagesCarousel" role="button" data-slide="prev">
+                        <i class="fa-solid fa-backward" style="color: #000000;"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#productImagesCarousel" role="button" data-slide="next">
+                        <i class="fa-solid fa-forward" style="color: #000000;"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center" >
+                    <img class="subimages"  src="images/iphone.png" alt="">
+                    <img class="subimages"  src="images/iphone2.png" alt="">
+                    <img class="subimages"  src="images/iphone.png" alt="">
+                    <img class="subimages"  src="images/iphone2.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 mt-sm-4">
+                <!-- Product Title -->
+                <h2>Iphone 11 Pro Max</h2>
+                <!-- Product Rating -->
+                <div class="mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <span class="ml-2">4.5 (25 Reviews)</span>
+                </div>
+                <!-- Product Price -->
+                <h2 class="priceh2"><span class="previousprice">$200</span>
+                    <span class="price">$99.99</span>
+                    <span class="off">50% off</span></h2>
+                <!-- Product Description -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod odio non leo
+                    facilisis, at tincidunt turpis consectetur. Ut vestibulum viverra risus sit amet finibus.
+                </p>
+                <!-- Product Variants (if applicable) -->
+                <div class="mb-4">
+                    <label for="productVariant">Select Color:</label>
+                    <select class="form-control" id="productVariant">
+                        <option value="color1">Black</option>
+                        <option value="color2">Green</option>
+                        <option value="color3">Blue</option> 
+                        <!-- Add more options if needed -->
+                    </select>
+                </div>
+                <!-- Add to Cart and Buy Now Buttons -->
+                <div class="mb-4">
+                    <button class="btn btn-primary mr-3">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                    <button class="btn btn-success">Buy Now <i class="fas fa-check"></i></button>
+                </div>
+                <!-- Social Media Sharing Icons -->
+                <div>
+                    <span>Share:</span>
+                    <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>

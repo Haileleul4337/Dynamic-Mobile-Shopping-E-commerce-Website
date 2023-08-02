@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, rgba(30,45,60,0.2), rgba(90,180,220,0.2)), url("https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        text-align: center;
+        color: #000000;
+        margin-top: 15px;
+        font-family:'Courier New', Courier, monospace;
+        font-weight: 500;   
+    }
+    form {
+        max-width: 350px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-control{
+        border: 1px solid rgb(184, 159, 159);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Admin Login</h1>
+          </div>
+          <div class="card-body">
+            <form id="loginForm">
+              <div class="form-group mb-3">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+              </div>
+              <div class="form-group mb-3">
+                <label for="password">Password:</label> 
+                <div class="input-group mb-3">
+                  <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="input-group-append">
+                    <span class="input-group-text show-password-icon">
+                      <input class="me-1 border-black" type="checkbox" id="showPassword">
+                      <label for="showPassword" class="mb-0">Show Password</label>
+                    </span>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-outline-primary px-4 border-1 border-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Admin credentials (you can replace these with your actual admin credentials)
+    const adminUsername = "admin";
+    const adminPassword = "password";
+    // Basic validation
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    if (!username || !password) {
+        alert("Please enter both username and password.");
+        return;
+    }
+    // Check if the provided credentials match the admin credentials
+    if (username === adminUsername && password === adminPassword) {
+        alert("Admin login successful!");
+        // You can redirect to the admin dashboard or perform other admin-related actions here
+    } else {
+        alert("Invalid credentials. Please try again.");
+    }
+    });
+  </script>
+</body>
+</html>

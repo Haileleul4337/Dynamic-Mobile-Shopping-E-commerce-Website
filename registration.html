@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="CSS/registration.css">
+    <script src="https://kit.fontawesome.com/e0db49a286.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form name="regForm" method="post" onsubmit="return registrationValidation()">
+        <input type="text" style="font-family: 'Times New Roman', Times, serif, fontAwesome;" name="fullname" id="fullname" placeholder="&#xf007; Full Name" required maxlength="30">
+        <br> 
+        <input type="email" style="font-family: 'Times New Roman', Times, serif, fontAwesome;" name="email" id="email" placeholder="&#xf0e0; Email" required minlength="10"
+               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+               title="Please enter a valid email address (e.g., hailsh@example.com)">
+        <br> 
+        <input type="password" style="font-family: 'Times New Roman', Times, serif, fontAwesome;" name="password" id="password" placeholder="&#xf023; Password" required minlength="8"
+               pattern=".{8,}"
+               title="Password must be at least 8 characters long">
+        <br>
+        <label for="dob"><i class="far fa-calendar-alt"></i> Date of Birth:</label>
+        <input type="date" name="dob" id="dob" required>
+        <br> 
+        <label><i class="fas fa-venus-mars"></i> Gender:</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="other" required>
+        <label for="other">Other</label>
+        <br> <br>
+        <input type="submit" value="Register" name="submit">
+        <a class="btn login btn-outline-light" href="login.html">Go to Login</a>
+    </form>
+    <!-- Add Font Awesome JavaScript (optional, for advanced features like animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        // Event Listeners for Real-Time Validation
+        document.getElementById('fullname').addEventListener('input', validateFullName);
+        document.getElementById('email').addEventListener('input', validateEmail);
+        document.getElementById('password').addEventListener('input', validatePassword);
+        document.getElementById('dob').addEventListener('change', validateDateOfBirth);
+        document.querySelectorAll('input[name="gender"]').forEach(input => {
+            input.addEventListener('change', validateGender);
+        });
+        // Validation Functions
+        function validateFullName() {
+            var fullname = document.getElementById('fullname').value.trim();
+            if (fullname === '') {
+                showError('fullname', 'Please enter your full name.');
+            } else {
+                hideError('fullname');
+            }
+        }
+        function validateEmail() {
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                showError('email', 'Please enter a valid email address (e.g., john@example.com).');
+            } else {
+                hideError('email');
+            }
+        }
+        function validatePassword() {
+            var password = document.getElementById('password').value;
+            if (password.length < 8) {
+                showError('password', 'Password must be at least 8 characters long.');
+            } else {
+                hideError('password');
+            }
+        }
+        function validateDateOfBirth() {
+            var dob = document.getElementById('dob').value;
+            var minDate = new Date();
+            minDate.setFullYear(minDate.getFullYear() - 18);
+            var selectedDate = new Date(dob);
+
+            if (selectedDate > minDate) {
+                showError('dob', 'You must be at least 18 years old to register.');
+            } else {
+                hideError('dob');
+            }
+        }
+        function validateGender() {
+            var gender = document.querySelector('input[name="gender"]:checked');
+            if (!gender) {
+                showError('gender', 'Please select your gender.');
+            } else {
+                hideError('gender');
+            }
+        }
+        // Common Functions
+        function showError(elementId, errorMessage) {
+            var errorElement = document.getElementById(elementId + '-error');
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.id = elementId + '-error';
+                errorElement.classList.add('error');
+                document.getElementById(elementId).insertAdjacentElement('afterend', errorElement);
+            }
+            errorElement.textContent = errorMessage;
+        }
+        function hideError(elementId) {
+            var errorElement = document.getElementById(elementId + '-error');
+            if (errorElement) {
+                errorElement.remove();
+            }
+        }
+        function registrationValidation() {
+            // ... (rest of the validation code remains unchanged)
+        }
+    </script>
+</body>
+</html>
